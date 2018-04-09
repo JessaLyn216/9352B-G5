@@ -1,0 +1,20 @@
+var source = {
+    "IceCream": {
+        "IceCreamStick": [
+            {"AmountFor": "Remittance", "Price": 5.00 },
+            {"AmountFor": "Profit", "Price": 5.00 }
+    ],
+        "Pinipig": [
+            {"AmountFor": "Remittance", "Price": 10.00 },
+            {"AmountFor": "Profit", "Price": 5.00 }
+        ],
+        "Buko Salad": [
+            {"AmountFor": "Remittance", "Price": 11.50 },
+            {"AmountFor": "Profit", "Price": 8.50 }
+        ],
+        "Drumstick": [
+            {"AmountFor": "Remittance", "Price": 15.00 },
+            {"AmountFor": "Profit", "Price": 10.00 }
+        ]
+    }
+}
