@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <title>iVendor</title>
+       <link rel="shortcut icon" href="img/iVendor.png" />
+       <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+	<body>
+        <header><div id="main" class="top-bar">
+            <span style="position:relative;left:0px;top:2px;font-size:33px;color:white;text-shadow:1px 1px 3px black;left: 10px; cursor:pointer" onclick="openNav()">&#9776;</span>
+            
+            <a href="index.html"><img src="img/iVendorLetters.png" class="logo-letters"></a>
+</div></header>
+        
+        <div id="mySidenav" class="sidenav">
+  
+            <div class="sidenav-top">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="img/iVendor.png" class="logo"></div>
+<br>
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="#">Remittance</a>
+  <a href="">Productivity</a>
+</div>
+
+<table class="products">
+    <tbody><tr>
+<td class="tb-body"><div class="IC-box">
+    <table>
+        <tbody>
+            <tr>
+                <td class="content">
+                    <img src="img/Stick.png" class="Stick "></td>
+    <td class="content"><div id="ct-content">
+
+	<h2>DRUMSTICK</h2>
+	
+	<div class="prodListDisplay">
+									
+	  <div class="product-box">			   
+	    <form action="">		   
+	
+	      <div class="productItem clearfix">
+	
+	        <div class="productTitle">
+	          <h3>
+	            <span class="product-url">
+	              CORNETO VANILLA
+	            </span>		
+	          </h3>
+	
+	        </div><!-- /.productTitle -->
+	
+	        <div class="purchaseBlock clearfix">	
+	
+	          <div class="productInput">
+	            <input name="quantity" type="number" value="1" title="Quantity for Another Product">
+	          </div>
+	
+	          <div class="priceBlock">
+	
+	            <span class="price currency">
+	              <small>P</small>20.32
+	            </span>
+	
+	          </div>
+	
+	          <a href="#" role="link" class="ct-removeSingle">
+	            <span class="ico">Remove</span>
+	          </a>
+	
+	        </div><!-- /.purchaseBlock -->
+	
+	      </div><!-- /.productItem -->
+	
+	      <!-- Remove Single Product Confirmation -->
+	      <div class="ct-confirmation-single">
+	        <div class="centerContent">
+	          <div class="centerContentInner">
+	            <p class="ct-removeSingleConfirmation clearfix">
+	              <span class="message">Remove this item?</span>
+	              <span class="ct-buttons ct-inline-buttons">
+	                <button class="btn-red ct-singleRemoveOK">OK</button>
+	                <button class="btn-grey ct-singleRemoveCancel">Cancel</button>
+	              </span>
+	            </p>
+	
+	          </div>
+	        </div>
+	      </div><!-- /.remove Confirmation -->
+	
+	    </form>
+	
+	  </div><!-- /.product-box -->
+	
+	</div><!-- /.prodListDisplay -->
+        </div></td></tr></tbody></table>
+    </div></td>
+ <td class="tb-body col-two"><div class="IC-box">       
+ <img src="img/Pinipig.png" class="Stick-one">       
+     </div></td> </tr>
+        <tr>
+<td class="tb-body"><div class="IC-box">   
+<img src="img/Buko.png" class="Stick">  
+    </div></td>   
+<td class="tb-body col-two"><div class="IC-box">
+<img src="img/DSTwo.png" class="Stick-one">
+    </div></td></tr> 
+    </tbody>
+        </table>
+        
+</body>
+
+
+<script>
+$(document).ready(function() {
+
+	$window = $(window);
+	$body = $('body');
+	
+	// Show confirmation for Remove Single Product
+	$(".ct-removeSingle").on( "click", function(event) {
+		event.preventDefault();
+		$(this).parents('form').removeAttr('class').addClass('trolley-conf-single-in');
+	});
+
+	// Hide confirmation for Remove Single Product
+	$(".ct-singleRemoveCancel").on( "click", function(event) {
+		event.preventDefault();
+		$(this).parents('form').removeAttr('class').addClass('trolley-conf-single-out');
+	});
+	
+	// Remove Single Product
+	$(".ct-singleRemoveOK").on( "click", function(event) {
+		event.preventDefault();
+		$(this).parents('form').removeAttr('class');
+		$(this).parents('.prodListDisplay').addClass('trolley-remove-product');
+	});
+  
+});
+    function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  
+}
+
+    function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>

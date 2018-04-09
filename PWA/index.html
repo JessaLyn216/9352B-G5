@@ -4,32 +4,60 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	   <title> iScream </title>
+	   <title>iVendor</title>
+       <link rel="shortcut icon" href="img/iVendor.png" />
        <link rel="stylesheet" type="text/css" href="styles.css">
     </head>
 
 	<body>
-        <header>
-            <img src="img/iscream.png" alt="iScream logo">
-
-            <h2> "You scream, Ice cream" </h2>
-        </header>
+        <header><div id="main" class="top-bar">
+            <span style="position:relative;left:0px;top:2px;font-size:33px;color:white;text-shadow:1px 1px 3px black;left: 10px; cursor:pointer" onclick="openNav()">&#9776;</span>
+            <a href="index.html"><img src="img/iVendorLetters.png" class="logo-letters"></a>
+</div></header>
         
-        <nav>
-            <ul>
-                <li class="active"><a href="">Home</a></li>
-                <li><a href="">Item 1</a></li>
-                <li><a href="">Item 2</a></li>
-                <li><a href="">Item 3</a></li>
-                <li><a href="">Item 4</a></li>
-            </ul>
-        </nav>
+        <div id="mySidenav" class="sidenav">
+  
+            <div class="sidenav-top">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="img/iVendor.png" class="logo"></div>
+<br>
+  <a href="index.html">Home</a>
+  <a href="inventory.html">Inventory</a>
+  <a href="#">Remittance</a>
+  <a href="">Productivity</a>
+</div>
 
-        <section class="contents">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque soluta, doloremque sit. Debitis, consectetur rem earum maiores reiciendis ipsum, eligendi voluptate ipsa laborum dolores est sint provident, consequuntur ratione!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque soluta, doloremque sit. Debitis, consectetur rem earum maiores reiciendis ipsum, eligendi voluptate ipsa laborum dolores est sint provident, consequuntur ratione!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque soluta, doloremque sit. Debitis, consectetur rem earum maiores reiciendis ipsum, eligendi voluptate ipsa laborum dolores est sint provident, consequuntur ratione!
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cumque soluta, doloremque sit. Debitis, consectetur rem earum maiores reiciendis ipsum, eligendi voluptate ipsa laborum dolores est sint provident, consequuntur ratione!
-        </section>
-    </body>
+          <div class="main-contents">
+        <a href="inventory.html"><div class="Notifications">
+        <h2>Ready to work?</h2>
+            <p>Add your stocks for the day!</p></div></a>
+        <a href="Productivity.html"><div class="Notifications">
+        <h2>Want to see your progress?</h2>
+        <p>Tap here to see.</p></div></a>
+        <a href="Remittance.html"><div class="Notifications">
+        <h2>Time for remittance?</h2>
+        <p>See the total calculation here.</p></div></a></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div>
+	<footer>Webtech 2018 | Group 5 </footer>
+	</div>
+        
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+  
+	 </body>
 </html>
