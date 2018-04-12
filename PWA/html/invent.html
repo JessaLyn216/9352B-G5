@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iVendor</title>
+        <link rel="shortcut icon" href="img/iVendor.png" />
+        <link rel="stylesheet" type="text/css" href="../styles.css">
+        <link rel="manifest" href="manifest.json">
+        <script src = "../vendor.js"></script>
+    </head>
+
+  <body>
+        <header>
+            <div class="main-header">
+                <span class = "menu-button" onclick="openNav()">&#9776;</span>
+                <a href="../index.html"><img src="../img/iVendorLetters.png" class="logo-letters"></a>
+            </div>
+        </header>
+        
+        <div id="mySidenav" class="sidenav">  
+            <div class="sidenav-top">                
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
+                <img src="../img/iVendor.png" class="logo">
+            </div>
+            <a href="../index.html">Home</a>
+            <a href="invent.html">Inventory</a>
+            <a href="#">Remittance</a>
+            <a href="">Productivity</a>
+        </div>
+        
+        <div class = "main-content">
+            <table>
+                <tr>
+                    <td>
+                        <section class = "products">
+                            <img src="../img/Buko.png" alt="Buko popsicle"/>
+
+                            <aside>
+                                <label class = "pname">BUKO</label>
+                                <input id = "pname" type="hidden" value="Buko"/> 
+                                <label class = "qty-prc">Enter Quantity:</label>
+                                <input id = "txtNumber" type="number" class = "quantity"  />   
+                                <br>
+                                <label class = "qty-prc">Unit Price: ₱</label>
+                                <input id = "price" type="text" value ="20" class = "price" readonly/> 
+                                <br>
+                                <button class = "submit" onclick="addItem()"> Submit </button>
+                            </aside>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class="products">
+                            <img src="../img/DSTwo.png" alt="Drumstick Ice cream"/>
+                            
+                            <aside>
+                                <label class = "pname">DRUMSTICK</label>
+                                <input id = "drum2" type="hidden" value="Drumstick"/> 
+                                <label class = "qty-prc">Enter Quantity:</label>
+                                <input id = "quant" type="number" class = "quantity"  />   
+                                <br>
+                                <label class = "qty-prc">Unit Price: ₱</label>
+                                <input id = "pr" type="text" value ="20" class = "price" readonly/> 
+                                <br>
+                                <button class = "submit" onclick="addItem2()"> Submit </button>
+                            </aside>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class = "products">
+                            <img src="../img/Stick.png" alt="Ice Cream Stick"/>
+
+                            <aside>
+                                <label class = "pname">ICE CREAM STICK</label>
+                                <input id = "pnames" type="hidden" value="Ice Cream Stick"/> 
+                                <label class = "qty-prc">Enter Quantity:</label>
+                                <input id = "pqtys" type="number" class = "quantity"  />   
+                                <br>
+                                <label class = "qty-prc">Unit Price: ₱</label>
+                                <input id = "prices" type="text" value ="20" class = "price" readonly/> 
+                                <br>
+                                <button class = "submit" onclick="addItems()"> Submit </button>
+                            </aside>
+                        </section>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <section class = "products">
+                            <img src="../img/Pinipig.png" alt="Pinipig popsicle"/>
+
+                            <aside>
+                                <label class = "pname">PINIPIG</label>
+                                <input id = "pnam" type="hidden" value="Pinipig"/> 
+                                <label class = "qty-prc">Enter Quantity:</label>
+                                <input id = "pqt" type="number" class = "quantity"  />   
+                                <br>
+                                <label class = "qty-prc">Unit Price: ₱</label>
+                                <input id = "pric" type="text" value ="20" class = "price" readonly/> 
+                                <br>
+                                <button class = "submit" onclick="addItem1()"> Submit </button>
+                            </aside>
+                        </section>
+                    </td>
+                </tr>
+            </table>
+            <section id = "cart" class = "products"></section>
+        </div>
+        
+      
+        <script src = "../script.js"></script>
+    </body>
+</html>
