@@ -112,7 +112,7 @@ a:hover {
     margin-left: auto;
     margin-right: auto;
 }
-.notifications {
+.sub-content {
     position: relative;
     background-color: #E7FFBC;
     border: 2px solid white;
@@ -123,268 +123,110 @@ a:hover {
     margin-left: auto;
     margin-right: auto;    
 }
-.notifications p {
+.sub-content p {
     font-size: 1.5vw;
     font-family: OpenLight;
 }
-
-.notifications h2 {
+.sub-content h2 {
     font-family: OpenLight;
     font-size: 2vw;
 }
-
-.notifications:hover {
+.sub-content:hover {
     box-shadow: 1px 1px 8px #676C60;
 }
-footer {
-    background-color: #000000;
-    padding: 0;
-    margin:0;
-    color: #ffffff;
-    text-align: right;
-    padding: 1%;
+section.showProducts {
+    margin-top: 2vw;
+    width: 100%;
 }
-footer h6 {
-    font-size: 1vw;
-    line-height: 0;
-    padding: 0;
-    margin: 1% 0 0 0 ;
-    font-weight: 500; 
-}
-footer p {
-    font-size: 0.9vw;
-}
-
-
-/* ADDED */
-table{
-	width: 100%;
-}
-section.products{
+section.product {
 	padding: 2vw;
 	background-color: #ffffff;
-    width: 80vw;
+    width: 42.5vw;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 20vw;
+    float: left;
     margin-bottom: 2vw;
-    border: 1px solid #efefef;
+    margin-left: 2vw;
+    border: 0.1vw solid #efefef;
 }
-.products:hover {
-    color: #000000;
-}
-.products img{
+.product img {
+    width: 15vw;
+    height: 15vw;
     box-shadow: 10px 6px 9px #f3f3f3;
-	width: 17vw;
-    height: 17vw;
     float: left;
 }
-.products aside{
-    margin-left: 15vw;
+aside.details {
 	float: left;
-    width: 30vw;
+    margin-left: 5vw;
 }
-.products label.pname {
-    font-family: Express;
-	text-align: left;
-    color: #303030;
-    font-size: 2vw;
-    font-weight: 700;
-    background: #fcfcfc;
-    padding: 1vw;
-    width: 30vw;
-    display: block;
-    margin-bottom: 2vw;
-}
-.products label.qty-prc{
-    font-size: 1.7vw;
-    margin: 0;
-}
-.products p {
-    color: #303030;
+input#quantity {
+    padding: 0.5vw;
+    width: 3.5vw;
     font-size: 1.2vw;
-}
-input{
-	width: 3.7vw;
-	font-size: 1.2vw;
-    color: #303030;
-    padding: 0.8vw;
-}
-input.price {
-    border: 0px;
-    font-size: 1.4vw;
+    margin-left: 1vw;
     font-weight: 600;
-    padding: 0;
+}
+h3.prodname {
+    font-size: 1.6vw;
+    background: #f7f7f7;
+    width: 20vw;
+    padding: 0.5vw;
+    margin-bottom: 2.5vw;
+    color: #404040;
+}
+.product label {
+    font-size: 1.2vw;
+    color: #202020;
+}
+.product strong {
+    font-size: 1.4vw;
+    margin-left: 1vw;
+    color: #202020;
 }
 button.submit{
-    float: left;
+    float: right;
 	background-color: #53b5aa;
-    width: 10vw;
-    height: 4vw;
+    width: 7vw;
+    height: 3vw;
 	border: none;
 	color: #efefef;
-	padding: 2% 3%;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-family: "YU Gothic UI";
 	cursor: pointer;
-    margin-top: 2vw;
+    margin-top: 4vw;
+    margin-right: -1vw;
 }
 button.submit:hover{
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
 	background-color: #d3d3d3;
 	border: 2px solid #53b5aa;
 	color: #303030;
     font-weight: 600;
-	padding: 2% 3%;
-	font-size: 1.5vw;
+	font-size: 1.2vw;
 	font-family: "YU Gothic UI";
 	cursor: pointer;
 	transition: 0.4s;
 }
-table.summary {
-    border-collapse: collapse;
+section#here {
+    clear: both;
+    display: block;
 }
-th {
-    text-align: left;
-    background: #53b5aa;
+section.add-product {
+    margin-top: 10vw;
+    width: 100%;
+}
+button.add {
+    font-size: 2vw;
+    background-color: #53b5aa;
+    cursor: pointer;
+    border: none;
+    color: #efefef;
     padding: 1vw;
-    font-size: 1.5vw;
-    
-}
-td.min-td {
-    width: 5vw;
-}
-.summary td {
-    background: #efefef;
-    padding: 0.5vw;
-    font-size: 1.3vw;
-    width: 30vw;
-}
-.totals td {
-    background: #C5C5C5;
-}
-.summary button {
-    background: #8D8D8D;
+    width: 20vw;
     float: right;
 }
-@media screen and (max-width: 600px) {
-    body {
-        background: #efefef;
-        padding: 0;
-        margin: 0;
-    }
-    .main-header {
-        height: 20vw;
-        width: 100vw;
-    }
-    .menu-button {
-        top: 3vw;
-        margin-left: 1vw;
-        font-size: 10vw;
-        display: block;
-        float: left;        
-    }
-    .logo-letters {
-        width: 60vw;
-        height: 20vw;
-        margin-left: 10vw;
-    }
-    .sidenav {
-        padding-top: 22vw;
-        height: 100%;
-        position: fixed;
-    }
-    .sidenav a {
-        font-size: 5vw;
-        margin: 2vw;
-    }
-    .sidenav-top {
-        height: 20vw;
-    }
-    img.logo {
-        height: 100%;
-        width: auto;
-    }
-    .sidenav-top .closebtn {
-        font-size: 10vw;
-        right: 5vw;
-    }
-    .notifications {
-        width: 90vw;
-        margin-bottom: 2vw;
-        border-radius: 20px;
-    }
-    .notifications h2 {
-        font-size: 5vw;
-    }
-    .notifications p {
-        font-size: 3vw;
-    }
-    .main-content {
-        padding-top: 16vw; 
-    }
-    section.products {
-        height: 80vw;
-        border: 0.1vw solid #d3d3d3;
-        border-radius: 2vw 10vw;
-    }
-    .products img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        float: none;
-        width: 35vw;
-        height: 35vw;
-        box-shadow: none;
-    }
-    .products label.pname {
-        font-size: 5vw;
-        margin-bottom: 3vw;
-        margin-top: 3vw;
-        width: 60vw;
-    }
-    .products label.qty-prc {
-        font-size: 3.5vw;
-    }
-    .products aside {
-        width: 60vw;
-        margin-left: 10vw;
-        display: block;
-    }
-    input {
-        font-size: 3vw;
-        width: 8vw
-    }
-    input.price {
-        font-size: 3vw;
-        width: 8vw;
-    }
-    button.submit {
-        font-size: 4vw;
-        width: 25vw;
-        height: 10vw;
-        margin-top: 3vw;
-    }
-    button.submit:hover {
-        font-size: 4vw;
-        font-weight: 700;
-    }
-    table.summary {
-        width: 90vw;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .summary th {
-        font-size: 3vw;
-    }
-    .summary td {
-        font-size: 3vw;
-    }
-    .summary td{
-        width: 0vw;
-    }
+img.add {
+    width: 2vw;
+    padding-top: 0.6vw;
+    margin-right: 1vw;
+    margin-left: 0;
 }

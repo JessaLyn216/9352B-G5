@@ -1,7 +1,7 @@
 {
     
     "author": "Group 5",
-    "background_color" : "#C6E7E7",
+    "background_color": "#C6E7E7",
     "description": "Progressive Web App",
     "display": "standalone",
     "icons": [
@@ -10,7 +10,7 @@
     "type": "image/png",
     "sizes": "128x128"
   }, {
-    "src": "img/iVendor152.png,
+    "src": "img/iVendor152.png",
     "type": "image/png",
     "sizes": "152x152"
   }, {
@@ -24,6 +24,8 @@
   }
     ],
 "name": "iVendor",
+"short_name": "iVendor",
 "orientation": "portrait",
-"start_url": "/utm_source=homescreen",
-"theme_color" : "#C6E7E7",
+"start_url": "index.html",
+"theme_color" : "#C6E7E7"
+}

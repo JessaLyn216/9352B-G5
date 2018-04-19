@@ -1,20 +1,30 @@
-var source = {
-    "IceCream": {
-        "IceCreamStick": [
-            {"AmountFor": "Remittance", "Price": 5.00 },
-            {"AmountFor": "Profit", "Price": 5.00 }
-    ],
-        "Pinipig": [
-            {"AmountFor": "Remittance", "Price": 10.00 },
-            {"AmountFor": "Profit", "Price": 5.00 }
-        ],
-        "Buko Salad": [
-            {"AmountFor": "Remittance", "Price": 11.50 },
-            {"AmountFor": "Profit", "Price": 8.50 }
-        ],
-        "Drumstick": [
-            {"AmountFor": "Remittance", "Price": 15.00 },
-            {"AmountFor": "Profit", "Price": 10.00 }
-        ]
+[
+    {
+        "name": "Ice Cream Stick",
+        "price": 10.00,
+        "img": "./img/Stick.png",
+        "Remittance": 5.00,
+        "Profit": 5.00
+    },
+    {
+        "name": "Pinipig",
+        "price": 15.00,
+        "img": "./img/Pinipig.png",
+        "Remittance": 10.00,
+        "Profit": 5.00
+    },
+    {
+        "name": "Buko Salad",
+        "price": 20.00,
+        "img": "./img/Buko.png",
+        "Remittance": 11.50,
+        "Profit": 8.50
+    },
+    {
+        "name": "Drumstick",
+        "price": 25.00,
+        "img": "./img/DSTwo.png",
+        "Remittance": 15.00,
+        "Profit": 10.00
     }
-}
+]
