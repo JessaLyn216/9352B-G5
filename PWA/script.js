@@ -26,40 +26,76 @@ function showProducts(data) {
         out += "<section class = 'product'>";
         out += "<img src = '"+data[i].img+"'/>";
         out += "<aside class = 'details'>";
-        out += "<h3 class = 'prodname'>"+data[i].name+"</h3>";
-        out += "<label>Price: <strong>₱"+data[i].price+"</strong></label>";
+        out += "<h3 class = 'prodname' id ='prodname"+i+"'>"+data[i].name+"</h3>";
+        out += "<label>Price: Php<strong id ='price"+i+"'>"+data[i].price+"</strong></label>";
         out += "<br>";
         out += "<label>Enter Quantity:</label>";
-        out += "<input type = 'number' id = 'quantity'/>";
+        out += "<input type ='number' class ='quantity' id ='quantity"+i+"'/>";
         out += "<br>";
-        out += "<button class = 'submit'>Submit</submit>";
+        out += "<button class ='submit' onclick='addLog("+i+")'>Submit</button>";
         out += "</aside>";
         out += "</section>";
     }
     out += "</section>";
-    document.getElementById('here').innerHTML=out;
+    document.getElementById('productList').innerHTML=out;
 }
-function addProduct() {
-    var request = new XMLHttpRequest();
-    request.open('GET', 'products.json', true);
-    request.onload = function () {
-        var data = JSON.parse(this.response);
-            
-//        var name = document.getElementById("pname").value;
-//        var price = document.getElementById("price").value;
-//        var img = document.getElementById("img").value;
-//        data.push({"name": name, "price":price, "img": img});
-//        showProducts(data);
-            
+
+var pname = [];
+var price = [];
+var qty = [];
+function addLog(i) {
+    var a = 'prodname'+i;
+    var b = 'price'+i;
+    var c = 'quantity'+i;
+    
+    pname.push(document.getElementById(a).textContent);
+    price.push(document.getElementById(b).textContent);
+    qty.push(document.getElementById(c).value);
+    
+    displayLog();
+    
+    document.getElementById(c).value=null;
+}
+function displayLog() {
+    var totalPrice = 0;
+    var totalSales = 0;
+    var remit = 0;
+    var profit = 0;
+    var totalRemit = 0;
+    var totalProfit = 0;
+    
+    var out = "<table class = 'displayLog'>" +
+        "<th>Product Name</th>" +
+        "<th>Unit Price</th>" +
+        "<th>Quantity</th>" +        
+        "<th>Total Price</th>";
+    
+    for(var j=0; j < pname.length; j++) {
+        out += "<tr>" +
+        "<td>" + pname[j] + "</td>" +
+        "<td>" + price[j] + "</td>" +
+        "<td>" + qty[j]+ "</td>" +
+        "<td>" + qty[j]*price[j] + "</td>" +
+        "</tr>";
+        totalPrice = qty[j]*price[j];
+        totalSales = totalPrice + totalSales;
+        remit = totalPrice * 0.40;
+        profit = totalPrice * 0.60;
+        totalRemit = totalRemit + remit;
+        totalProfit = totalProfit + profit;
     }
-    request.send();
+    
+    out += "</table>";
+    
+    //Totals
+    out += "<section class = 'totals'>" +
+        "<h3>TOTALS</h3>" +
+        "<p>Total Sales <strong>"+totalSales+"</strong></p>" +
+        "<p>Total Remittance <strong>"+totalRemit+"</strong></p>" +
+        "<p>Total Profit <strong>"+totalProfit+"</strong></p>";
+    out += "</section>";
+    document.getElementById('showLog').innerHTML=out;
 }
-
-
-
-
-
-
 
 /*Code for the service worker*/
 if ('serviceWorker' in navigator) {

@@ -118,7 +118,7 @@ a:hover {
     border: 2px solid white;
     padding: 1vw 1vw 1vw 2vw;
     margin-bottom: 1vw;
-    width: 90%;
+    width: 90vw;
     display: block;;
     margin-left: auto;
     margin-right: auto;    
@@ -135,7 +135,7 @@ a:hover {
     box-shadow: 1px 1px 8px #676C60;
 }
 section.showProducts {
-    margin-top: 2vw;
+    margin-top: 10vw;
     width: 100%;
 }
 section.product {
@@ -158,7 +158,7 @@ aside.details {
 	float: left;
     margin-left: 5vw;
 }
-input#quantity {
+input.quantity {
     padding: 0.5vw;
     width: 3.5vw;
     font-size: 1.2vw;
@@ -179,7 +179,7 @@ h3.prodname {
 }
 .product strong {
     font-size: 1.4vw;
-    margin-left: 1vw;
+    margin-left: 0.2vw;
     color: #202020;
 }
 button.submit{
@@ -206,27 +206,38 @@ button.submit:hover{
 	cursor: pointer;
 	transition: 0.4s;
 }
-section#here {
+#showLog {
+    width: 80vw;
+    background: #ffffff;
     clear: both;
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3vw;
 }
-section.add-product {
-    margin-top: 10vw;
-    width: 100%;
+table.displayLog {
+    width: 80vw;
+    margin: 0;
+    text-align: center;
+    border-collapse: collapse;
+    border: 0.1vw solid #efefef;
 }
-button.add {
-    font-size: 2vw;
-    background-color: #53b5aa;
-    cursor: pointer;
-    border: none;
-    color: #efefef;
-    padding: 1vw;
-    width: 20vw;
+.displayLog th {
+    background: #53b5aa;
+    padding: 0.50vw;
+    font-size: 1.3vw;
+}
+.displayLog td {
+    padding: 0.50vw;
+    font-size: 1.2vw;
+}
+.displayLog tr:nth-child(2n) {
+    background: #efefef;
+}
+section.totals {
+    margin-top: 4vw;
+    width: 30vw;
+}
+.totals strong {
     float: right;
-}
-img.add {
-    width: 2vw;
-    padding-top: 0.6vw;
-    margin-right: 1vw;
-    margin-left: 0;
 }
