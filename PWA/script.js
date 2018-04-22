@@ -30,9 +30,9 @@ function showProducts(data) {
         out += "<label>Price: Php<strong id ='price"+i+"'>"+data[i].price+"</strong></label>";
         out += "<br>";
         out += "<label>Enter Quantity:</label>";
-        out += "<input type ='number' class ='quantity' id ='quantity"+i+"'/>";
+        out += "<input type ='number' class ='quantity' id ='quantity"+i+"' min='0'/>";
         out += "<br>";
-        out += "<button class ='submit' onclick='addLog("+i+")'>Submit</button>";
+        out += "<button class ='submit-btn' onclick='addLog("+i+")'>Submit</button>";
         out += "</aside>";
         out += "</section>";
     }
@@ -75,7 +75,7 @@ function displayLog() {
         "<td>" + pname[j] + "</td>" +
         "<td>" + price[j] + "</td>" +
         "<td>" + qty[j]+ "</td>" +
-        "<td>" + qty[j]*price[j] + "</td>" +
+        "<td>" + qty[j]*price[j] + "<button class = 'del-btn' onclick='deleteLog("+j+")'> X </button></td>" +
         "</tr>";
         totalPrice = qty[j]*price[j];
         totalSales = totalPrice + totalSales;
@@ -92,11 +92,23 @@ function displayLog() {
         "<h3>TOTALS</h3>" +
         "<p>Total Sales <strong>"+totalSales+"</strong></p>" +
         "<p>Total Remittance <strong>"+totalRemit+"</strong></p>" +
-        "<p>Total Profit <strong>"+totalProfit+"</strong></p>";
-    out += "</section>";
+        "<p>Total Profit <strong>"+totalProfit+"</strong></p>" +
+        "<button type='submit' id='checkout-btn' onclick='clearStorage()'>Check Out</button>";
+    out += "</section>";    
+    
     document.getElementById('showLog').innerHTML=out;
 }
-
+function deleteLog(i) {
+    pname.splice(i,1);
+    price.splice(i,1);
+    qty.splice(i,1);
+    
+    displayLog();
+}
+function clearStorage() {
+    sessionStorage.clear();
+    window.location = window.location;
+}
 /*Code for the service worker*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {

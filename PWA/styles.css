@@ -34,6 +34,7 @@ body{
     left: 0;
     z-index: 1;
     padding: 1vw;
+    box-shadow: 1px 2px 5px #eeeeee;
 }
 .logo-letters {
     position: absolute;
@@ -42,61 +43,6 @@ body{
     height: 5vw;
     width: auto;
     float: left;
-}
-.menu-button {
-    position: relative;
-    top:0.8vw;
-    left: 1vw;
-    font-size: 2.5vw;
-    color: #ffffff;
-    text-shadow:1px 1px 3px black;
-    cursor: pointer;
-}
-.sidenav {
-    height: 100vw;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #FCFCFC;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 6vw;
-    box-shadow: 2px 2px 7px #6E6F6F;
-}
-.sidenav a {
-    text-decoration: none;
-    font-size: 1.5vw;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-}
-.sidenav a:hover {
-    color: #f1f1f1;
-}
-.sidenav a:not(.closebtn) {
-    padding: 2vw 2vw 0vw 2vw;
-}
-.sidenav .closebtn {
-    position: absolute;
-    text-align: right;
-    right: 3vw;
-    font-size: 3vw;
-}
-.sidenav-top {
-    position: absolute;
-    top: 0;
-    background-color: #D1E1E2;
-    transition: 0.3s;
-    height: 5vw;
-    padding: 1vw;
-    width: 100%;
-}
-img.logo {
-    position: relative;
-    width: 5vw;
-    height: 5vw;
 }
 a {
     color: #000;
@@ -182,7 +128,7 @@ h3.prodname {
     margin-left: 0.2vw;
     color: #202020;
 }
-button.submit{
+button.submit-btn{
     float: right;
 	background-color: #53b5aa;
     width: 7vw;
@@ -195,7 +141,7 @@ button.submit{
     margin-top: 4vw;
     margin-right: -1vw;
 }
-button.submit:hover{
+button.submit-btn:hover{
 	display: block;
 	background-color: #d3d3d3;
 	border: 2px solid #53b5aa;
@@ -207,20 +153,22 @@ button.submit:hover{
 	transition: 0.4s;
 }
 #showLog {
-    width: 80vw;
+    width: 89vw;
     background: #ffffff;
     clear: both;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
+    margin-left: 2vw;
     padding: 3vw;
+    display: block;
+    border: 0.1vw solid #efefef;
 }
 table.displayLog {
-    width: 80vw;
+    width: 50vw;
     margin: 0;
     text-align: center;
     border-collapse: collapse;
     border: 0.1vw solid #efefef;
+    float: left;
 }
 .displayLog th {
     background: #53b5aa;
@@ -234,10 +182,38 @@ table.displayLog {
 .displayLog tr:nth-child(2n) {
     background: #efefef;
 }
+button.del-btn {
+    float: right;
+    background: #f44336;
+    border: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1vw;
+}
 section.totals {
-    margin-top: 4vw;
     width: 30vw;
+    float: right;
+    margin-top: 0;
+}
+.totals h3 {
+    font-size: 1.5vw;
+}
+.totals p {
+    font-size: 1.2vw;
 }
 .totals strong {
     float: right;
+}
+.totals strong::before {
+    content: 'Php ';
+}
+button#checkout-btn {
+    float: right;
+    margin-top: 3vw;
+    background: green;
+    border: none;
+    padding: 1vw;
+    font-size: 1.3vw;
+    color: #ffffff;
+    cursor: pointer;
 }
