@@ -20,8 +20,10 @@ request.onload = function () {
 }
 request.send();
 
+
 function showProducts(data) {
     var out = "<section class = 'showProducts'>";
+    out += "<h2>Add your sales...</h2>";
     for (var i = 0; i < data.length; i++) {      
         out += "<section class = 'product'>";
         out += "<img src = '"+data[i].img+"'/>";
@@ -64,7 +66,8 @@ function displayLog() {
     var totalRemit = 0;
     var totalProfit = 0;
     
-    var out = "<table class = 'displayLog'>" +
+    var out = "<h2>Sales</h2>";
+    out += "<table class = 'displayLog'>" +
         "<th>Product Name</th>" +
         "<th>Unit Price</th>" +
         "<th>Quantity</th>" +        
@@ -106,7 +109,7 @@ function deleteLog(i) {
     displayLog();
 }
 function clearStorage() {
-    sessionStorage.clear();
+    localStorage.clear();
     window.location = window.location;
 }
 /*Code for the service worker*/

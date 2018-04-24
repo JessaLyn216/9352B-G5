@@ -10,6 +10,10 @@
     font-family: Express;
     src: url(fonts/Express.ttf);
 }
+@font-face {
+    font-family: LuckiestGuy;
+    src: url(fonts/LuckiestGuy.ttf);
+}
 * {
     font-family: Open;
 }
@@ -50,35 +54,6 @@ a {
 }
 a:hover {
     color: #53b5aa;
-}
-.main-content {
-    width: 100vw;
-    margin-top: 9vw;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-.sub-content {
-    position: relative;
-    background-color: #E7FFBC;
-    border: 2px solid white;
-    padding: 1vw 1vw 1vw 2vw;
-    margin-bottom: 1vw;
-    width: 90vw;
-    display: block;;
-    margin-left: auto;
-    margin-right: auto;    
-}
-.sub-content p {
-    font-size: 1.5vw;
-    font-family: OpenLight;
-}
-.sub-content h2 {
-    font-family: OpenLight;
-    font-size: 2vw;
-}
-.sub-content:hover {
-    box-shadow: 1px 1px 8px #676C60;
 }
 section.showProducts {
     margin-top: 10vw;
@@ -216,4 +191,33 @@ button#checkout-btn {
     font-size: 1.3vw;
     color: #ffffff;
     cursor: pointer;
+}
+
+/**added**/
+.showProducts h2 {
+    font-size: 2.5vw;
+    margin-left: 2vw;
+    color: #404040;
+    font-family: LuckiestGuy;
+    font-weight: 500;
+}
+#circle-btn {
+    background: #f3a09d;
+    border: none;
+    border-radius: 50%;
+    text-align: center;
+    padding: 9vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14vw;
+    font-size: 1.5vw;
+    color: #ffffff;
+    cursor: pointer;
+    width: 18vw;
+}
+#circle-btn:hover {
+    box-shadow: 1px 1px 8px #676C60;
+    color: #404040;
+    transition: 1s;
 }
