@@ -29,7 +29,6 @@ body{
     font-family: "Lato", sans-serif;
 }
 .main-header {
-    transition: margin-left .5s;
     position: fixed;
     width: 100vw;
     height: 5vw;
@@ -41,12 +40,10 @@ body{
     box-shadow: 1px 2px 5px #eeeeee;
 }
 .logo-letters {
-    position: absolute;
     margin-left: 3vw;
     z-index: 1;
     height: 5vw;
     width: auto;
-    float: left;
 }
 a {
     color: #000;
@@ -115,17 +112,6 @@ button.submit-btn{
 	cursor: pointer;
     margin-top: 4vw;
     margin-right: -1vw;
-}
-button.submit-btn:hover{
-	display: block;
-	background-color: #d3d3d3;
-	border: 2px solid #53b5aa;
-	color: #303030;
-    font-weight: 600;
-	font-size: 1.2vw;
-	font-family: "YU Gothic UI";
-	cursor: pointer;
-	transition: 0.4s;
 }
 #showLog {
     width: 89vw;
@@ -220,4 +206,191 @@ button#checkout-btn {
     box-shadow: 1px 1px 8px #676C60;
     color: #404040;
     transition: 1s;
+}
+
+@media only screen and (max-width: 360px){
+    body{
+        margin-top: 25vw;
+    }
+    .main-header {
+        height: 22vw;
+        top: 0;
+        position: fixed;
+        margin-top: -3vw; 
+    }
+    .logo-letters {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 13vw;
+        margin-top: 5.3vw;
+    }
+    section.product {
+        width: 92vw;
+    }
+    .product img {
+        width: 30vw;
+        height: 30vw;
+    }
+    .showProducts h2 {
+        font-size: 6vw;
+    }
+    aside.details {
+        width: 55vw;
+    }
+    h3.prodname {
+        font-size: 6vw;
+        width: 50vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+    .product label {
+        font-size: 4vw;   
+    }
+    .product strong {
+        font-size: 4vw;
+    }
+    input.quantity {
+        width: 8vw;
+        font-size: 4vw;
+    }
+    button.submit-btn{
+        float: right;
+        background-color: #53b5aa;
+        width: 19vw;
+        height: 7vw;
+        font-size: 4.5vw;
+        margin-top: 3vw;
+    }
+    #showLog{
+        width: 89.9vw;
+    }
+    #showLog h2{
+        margin-top: 0vw;
+        margin-bottom: 2vw;
+    }
+    table.displayLog {
+        width: 90vw;
+    }
+    .displayLog th, .displayLog td {
+        font-size: 3.5vw;
+    }
+    button.del-btn {
+        font-size: 3vw;
+    }
+    section.totals {
+        width: 88vw;
+    }
+    .totals h3 {
+        font-size: 4vw;
+    }
+    .totals p {
+        font-size: 3.5vw;
+        line-height: 1;
+    }
+    button#checkout-btn {
+        font-size: 4.5vw;
+        padding: 2vw;
+    }
+    #circle-btn {
+        border-radius: 50%;
+        margin-top: 45vw;
+        font-size: 5vw;
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    body{
+        margin-top: 10vw;
+    }
+    .main-header {
+        height: 10vw;
+        top: 0;
+        position: fixed;
+        margin-top: -3vw; 
+    }
+    .logo-letters {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        height: 8vw;
+        margin-top: 2.5vw;
+    }
+    section.product {
+        width: 92vw;
+    }
+    .product img {
+        width: 15vw;
+        height: 15vw;
+    }
+    .showProducts h2 {
+        font-size: 3.4vw;
+    }
+    aside.details {
+        width: 71vw;
+    }
+    h3.prodname {
+        font-size: 3.7vw;
+        width: 50vw;
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+    }
+    .product label {
+        font-size: 3vw;   
+    }
+    .product strong {
+        font-size: 3vw;
+    }
+    input.quantity {
+        width: 8vw;
+        font-size: 3vw;
+    }
+    button.submit-btn{
+        float: right;
+        background-color: #53b5aa;
+        width: 13vw;
+        height: 6vw;
+        font-size: 3.2vw;
+        margin-top: 3vw;
+    }
+    #showLog{
+        width: 89.9vw;
+    }
+    #showLog h2{
+        margin-top: 0vw;
+        margin-bottom: 2vw;
+    }
+    table.displayLog {
+        width: 90vw;
+    }
+    .displayLog th, .displayLog td {
+        font-size: 3vw;
+    }
+    button.del-btn {
+        font-size: 3vw;
+    }
+    section.totals {
+        width: 88vw;
+    }
+    .totals h3 {
+        font-size: 3.7vw;
+    }
+    .totals p {
+        font-size: 3vw;
+        line-height: 1;
+    }
+    button#checkout-btn {
+        font-size: 3.2vw;
+        padding: 2vw;
+    }
+    #circle-btn {
+        border-radius: 50%;
+        margin-top: 45vw;
+        font-size: 5vw;
+        width: 45vw;
+    }
+    
 }
